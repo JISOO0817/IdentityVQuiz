@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CCBADF"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:fontFamily="@font/tvnbold"
+            android:text="제 5인격 퀴즈"
+            android:textColor="#FFFFFF"
+            android:textSize="70dp" />
+
+
+
+    <Spinner
+        android:id="@+id/quizLev"
+        android:layout_width="185dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="90dp"
+        android:background="@drawable/btn_drawable2"
+        android:entries="@array/quiz_category"
+        android:spinnerMode="dialog" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/tvnbold"
+        android:text="카테고리 별로 각 10문제씩 있습니다."
+        android:textColor="#FFFFFF"
+        android:textSize="20dp" />
+
+
+        <Button
+            android:layout_width="@dimen/startBtn_width"
+            android:layout_height="@dimen/startBtn_height"
+            android:layout_marginTop="50dp"
+            android:onClick="startQuiz"
+            android:background="@drawable/btn_drawable"
+            android:text="시작하기"
+            android:textColor="#ffffff"
+            android:textSize="25dp"
+            android:fontFamily="@font/tvnbold"/>
+
+
+
+
+</LinearLayout>

@@ -1,54 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#CCBADF"
-    android:gravity="center_horizontal"
-    android:orientation="vertical">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#CCBADF">
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineLeGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.10"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/spinnerLeGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/spinnerRiGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.75"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineRiGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.90"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/mainLogoTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/spinnerTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.43"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/spinnerBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.50"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/hintTVTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/startBtnTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.80"/>
+
 
 
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:fontFamily="@font/tvnbold"
             android:text="제 5인격 퀴즈"
+            android:gravity="center"
             android:textColor="#FFFFFF"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            app:layout_constraintTop_toBottomOf="@+id/mainLogoTopGL"
+            app:layout_constraintDimensionRatio="h,1:0.3"
             android:textSize="70dp" />
 
 
 
-    <Spinner
-        android:id="@+id/quizLev"
-        android:layout_width="185dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="90dp"
-        android:background="@drawable/btn_drawable2"
-        android:entries="@array/quiz_category"
-        android:spinnerMode="dialog" />
+        <Spinner
+            android:id="@+id/quizLev"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/btn_drawable2"
+            android:entries="@array/quiz_category"
+            android:spinnerMode="dialog"
+            app:layout_constraintTop_toBottomOf="@+id/spinnerTopGL"
+            app:layout_constraintBottom_toTopOf="@+id/spinnerBotGL"
+            app:layout_constraintStart_toEndOf="@+id/spinnerLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerRiGL"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/tvnbold"
-        android:text="카테고리 별로 각 10문제씩 있습니다."
-        android:textColor="#FFFFFF"
-        android:textSize="20dp" />
+        <TextView
+            android:id="@+id/hintTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
+            android:text="카테고리 별로 각 10문제씩 있습니다."
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="20dp"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            app:layout_constraintTop_toBottomOf="@+id/hintTVTopGL"
+            app:layout_constraintDimensionRatio="h,1:0.1"/>
 
 
         <Button
-            android:layout_width="@dimen/startBtn_width"
-            android:layout_height="@dimen/startBtn_height"
-            android:layout_marginTop="50dp"
+            android:id="@+id/startBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:onClick="startQuiz"
             android:background="@drawable/btn_drawable"
             android:text="시작하기"
             android:textColor="#ffffff"
             android:textSize="25dp"
-            android:fontFamily="@font/tvnbold"/>
+            android:fontFamily="@font/tvnbold"
+            app:layout_constraintStart_toEndOf="@+id/spinnerLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/spinnerRiGL"
+            app:layout_constraintTop_toBottomOf="@+id/startBtnTopGL"
+            app:layout_constraintDimensionRatio="h,1:0.3"
+            />
 
 
 
 
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

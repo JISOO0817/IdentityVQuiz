@@ -1,4 +1,4 @@
-package com.jisoo.identityvquiz;
+package com.jisoo.identityvquiz.result;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.jisoo.identityvquiz.R;
+import com.jisoo.identityvquiz.SoundPlayer;
+import com.jisoo.identityvquiz.start.StartActivity;
 
 public class ResultActivity extends AppCompatActivity {
 
@@ -40,7 +44,7 @@ public class ResultActivity extends AppCompatActivity {
     }
 
     public void returnTop(View view){
-        startActivity(new Intent(getApplicationContext(),StartActivity.class));
+        startActivity(new Intent(getApplicationContext(), StartActivity.class));
 
         soundPlayer.playbtnSound();
     }

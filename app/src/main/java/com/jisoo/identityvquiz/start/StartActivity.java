@@ -1,4 +1,4 @@
-package com.jisoo.identityvquiz;
+package com.jisoo.identityvquiz.start;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,10 @@ import android.widget.Spinner;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.jisoo.identityvquiz.R;
+import com.jisoo.identityvquiz.SoundPlayer;
+import com.jisoo.identityvquiz.main.MainActivity;
 
 public class StartActivity extends AppCompatActivity {
 

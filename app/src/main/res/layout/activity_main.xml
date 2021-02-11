@@ -1,108 +1,249 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center_horizontal"
-    android:orientation="vertical"
-    android:background="#CCBADF"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
 
-    <LinearLayout
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:background="#CCBADF"
+        tools:context=".main.MainActivity">
 
 
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
 
-            <ImageView
-                android:id="@+id/closebt"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                app:srcCompat="@drawable/ximage" />
-        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineLeGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.13"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineRiGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.87"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/closeBtnRiGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.98"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/countLabelTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.085"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/closeBtnTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.01"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/closeBtnBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.05"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/countLabelBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.16"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/questionLabelTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.20"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/questionLabelBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn1TopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.45"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn1BotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.53"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn2TopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.58"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn2BotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.66"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn3TopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.71"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn3BotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.79"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn4TopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.84"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/ansBtn4BotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.92"/>
+
+
+        <ImageView
+            android:id="@+id/closeBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/closeBtnTopGL"
+            app:layout_constraintBottom_toTopOf="@+id/closeBtnBotGL"
+            app:layout_constraintStart_toEndOf="@+id/lineRiGL"
+            app:layout_constraintEnd_toStartOf="@+id/closeBtnRiGL"
+            app:srcCompat="@drawable/ximage" />
+
 
         <TextView
             android:id="@+id/countLabel"
-            android:layout_width="308dp"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:gravity="center"
-            android:layout_marginTop="30dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/btn_drawable3"
             android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
+            android:gravity="center_horizontal"
             android:text="Q1"
             android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/countLabelBotGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintTop_toBottomOf="@+id/countLabelTopGL"
             android:textSize="40dp" />
-
 
         <TextView
             android:id="@+id/questionLabel"
-            android:layout_width="356dp"
-            android:layout_height="101dp"
-            android:layout_gravity="center"
-            android:layout_marginTop="60dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:fontFamily="@font/baemin"
+            android:includeFontPadding="false"
             android:gravity="center"
             android:text="Question"
             android:textColor="#FFFFFF"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            app:layout_constraintTop_toBottomOf="@+id/questionLabelTopGL"
+            app:layout_constraintBottom_toTopOf="@+id/questionLabelBotGL"/>
 
         <Button
             android:id="@+id/answerBtn1"
-            android:layout_width="@dimen/answerBtn_width"
-            android:layout_height="@dimen/answerBtn_height"
-            android:layout_gravity="center"
-            android:layout_marginTop="100dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/btn_drawable"
             android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
             android:onClick="checkAnswer"
             android:textColor="#FFFFFF"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            app:layout_constraintTop_toBottomOf="@+id/ansBtn1TopGL"
+            app:layout_constraintBottom_toTopOf="@+id/ansBtn1BotGL"/>
+
 
         <Button
             android:id="@+id/answerBtn2"
-            android:layout_width="@dimen/answerBtn_width"
-            android:layout_height="@dimen/answerBtn_height"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/btn_drawable"
             android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
             android:onClick="checkAnswer"
             android:textColor="#FFFFFF"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/ansBtn2TopGL"
+            app:layout_constraintBottom_toTopOf="@+id/ansBtn2BotGL"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"/>
+            />
 
         <Button
             android:id="@+id/answerBtn3"
-            android:layout_width="@dimen/answerBtn_width"
-            android:layout_height="@dimen/answerBtn_height"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/btn_drawable"
             android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
             android:onClick="checkAnswer"
             android:textColor="#FFFFFF"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/ansBtn3TopGL"
+            app:layout_constraintBottom_toTopOf="@+id/ansBtn3BotGL"
+            app:layout_constraintStart_toEndOf="@id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL" />
 
         <Button
             android:id="@+id/answerBtn4"
-            android:layout_width="@dimen/answerBtn_width"
-            android:layout_height="@dimen/answerBtn_height"
-            android:layout_gravity="center"
-            android:layout_marginTop="6dp"
-            android:layout_marginBottom="20dp"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
             android:background="@drawable/btn_drawable"
             android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
             android:onClick="checkAnswer"
             android:textColor="#FFFFFF"
-            android:textSize="25dp" />
+            android:textSize="25dp"
+            app:layout_constraintTop_toBottomOf="@+id/ansBtn4TopGL"
+            app:layout_constraintBottom_toTopOf="@+id/ansBtn4BotGL"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            />
 
-    </LinearLayout>
-
-
-</ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

@@ -1,4 +1,4 @@
-package com.jisoo.identityvquiz;
+package com.jisoo.identityvquiz.main;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -12,6 +12,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.jisoo.identityvquiz.QuizDatabaseHelper;
+import com.jisoo.identityvquiz.R;
+import com.jisoo.identityvquiz.result.ResultActivity;
+import com.jisoo.identityvquiz.SoundPlayer;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -127,7 +132,7 @@ public class MainActivity extends AppCompatActivity {
         showNextQuiz();
 
 
-        ImageView closeBtn = findViewById(R.id.closebt);
+        ImageView closeBtn = findViewById(R.id.closeBtn);
         closeBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -148,7 +153,7 @@ public class MainActivity extends AppCompatActivity {
         // Pick one quiz set.
         ArrayList<String> quiz = quizArray.get(randomNum);
 
-        // Set question and right answer.
+        // Set questiona and right answer.
         // Array format: {"Country", "Right Answer", "Choice1", "Choice2", "Choice3"}
         questionLabel.setText(quiz.get(0));
         rightAnswer = quiz.get(1);
@@ -221,5 +226,10 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
+ /*   @Override
+    protected void onPause() {
+        super.onPause();
+        soundPlayer = null;
 
+    }*/
 }

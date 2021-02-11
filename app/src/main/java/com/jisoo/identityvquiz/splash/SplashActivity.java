@@ -1,4 +1,4 @@
-package com.jisoo.identityvquiz;
+package com.jisoo.identityvquiz.splash;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,6 +6,9 @@ import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
+
+import com.jisoo.identityvquiz.R;
+import com.jisoo.identityvquiz.start.StartActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
@@ -25,12 +28,16 @@ public class SplashActivity extends AppCompatActivity {
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
-                startActivity(new Intent(getApplication(),StartActivity.class));
+                startActivity(new Intent(getApplication(), StartActivity.class));
 
                 SplashActivity.this.finish();
             }
         },3000);
     }
 
-
+    @Override
+    protected void onPause() {
+        super.onPause();
+        mp.pause();
+    }
 }

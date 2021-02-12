@@ -1,46 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:gravity="center_horizontal"
-    android:layout_width="match_parent"
-    android:background="#CCBADF"
-    android:layout_height="match_parent">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="result"
+            type="com.jisoo.identityvquiz.result.ResultViewModel" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:background="#CCBADF"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineLeGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.13"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/scoreTVLeGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.22"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/scoreTVRiGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.78"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/lineRiGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.87"/>
 
 
-    <TextView
-        android:layout_width="308dp"
-        android:layout_height="wrap_content"
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/resultTitleTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.085"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/resultTitleBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.18"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/scoreTVTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.35"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/scoreTVBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.55"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/restartBtnTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.7"/>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/restartBtnBotGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.78"/>
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:background="@drawable/btn_drawable3"
+            android:fontFamily="@font/tvnbold"
+            android:includeFontPadding="false"
+            android:text="@string/result_resultTV"
+            android:textColor="#FFFFFF"
+            app:layout_constraintTop_toBottomOf="@+id/resultTitleTopGL"
+            app:layout_constraintBottom_toTopOf="@+id/resultTitleBotGL"
+            app:layout_constraintStart_toEndOf="@+id/lineLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
+            android:textSize="40dp" />
+
+
         android:layout_gravity="center"
-        android:gravity="center"
-        android:layout_marginTop="50dp"
-        android:background="@drawable/btn_drawable3"
-        android:fontFamily="@font/tvnbold"
-        android:text="결과"
-        android:textColor="#FFFFFF"
-        android:textSize="40dp" />
+        <TextView
+            android:id="@+id/scoreTV"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="3/5"
+            android:textColor="#FFFFFF"
+            android:textSize="70dp"
+            android:fontFamily="@font/baemin"
+            android:includeFontPadding="false"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/scoreTVTopGL"
+            app:layout_constraintBottom_toTopOf="@+id/scoreTVBotGL"
+            app:layout_constraintStart_toEndOf="@+id/scoreTVLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/scoreTVRiGL"/>
+
+        <Button
+            android:id="@+id/goHomeBtn"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:text="돌아가기"
+            android:textSize="25dp"
+            android:textColor="#FFFFFF"
+            android:background="@drawable/btn_drawable"
+            android:fontFamily="@font/tvnbold"
+            app:layout_constraintStart_toEndOf="@+id/scoreTVLeGL"
+            app:layout_constraintEnd_toStartOf="@+id/scoreTVRiGL"
+            app:layout_constraintTop_toBottomOf="@+id/restartBtnTopGL"
+            app:layout_constraintBottom_toTopOf="@+id/restartBtnBotGL"/>
 
 
-    <TextView
-        android:id="@+id/resultLabel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="3/5"
-        android:textColor="#FFFFFF"
-        android:textSize="70dp"
-        android:fontFamily="@font/baemin"
-        android:layout_gravity="center"
-        android:layout_marginTop="120dp"/>
 
-    <Button
-        android:layout_width="140dp"
-        android:layout_height="50dp"
-        android:text="돌아가기"
-        android:textSize="25dp"
-        android:textColor="#FFFFFF"
-        android:background="@drawable/btn_drawable"
-        android:fontFamily="@font/tvnbold"
-        android:layout_marginTop="80dp"
-        android:onClick="returnTop"/>
-
-
-</LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

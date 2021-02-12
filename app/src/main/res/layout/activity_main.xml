@@ -3,7 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
     <data>
-
+        <variable
+            name="main"
+            type="com.jisoo.identityvquiz.main.MainViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -40,12 +42,6 @@
             app:layout_constraintGuide_percent="0.98"/>
 
 
-        <androidx.constraintlayout.widget.Guideline
-            android:id="@+id/countLabelTopGL"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            app:layout_constraintGuide_percent="0.085"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/closeBtnTopGL"
@@ -60,6 +56,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             app:layout_constraintGuide_percent="0.05"/>
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/countLabelTopGL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent="0.085"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/countLabelBotGL"
@@ -148,7 +152,7 @@
             app:layout_constraintBottom_toTopOf="@+id/closeBtnBotGL"
             app:layout_constraintStart_toEndOf="@+id/lineRiGL"
             app:layout_constraintEnd_toStartOf="@+id/closeBtnRiGL"
-            app:srcCompat="@drawable/ximage" />
+             />
 
 
         <TextView
@@ -159,7 +163,7 @@
             android:fontFamily="@font/tvnbold"
             android:includeFontPadding="false"
             android:gravity="center_horizontal"
-            android:text="Q1"
+            android:text="@string/main_number"
             android:textColor="#FFFFFF"
             app:layout_constraintBottom_toTopOf="@+id/countLabelBotGL"
             app:layout_constraintEnd_toStartOf="@+id/lineRiGL"
@@ -174,7 +178,7 @@
             android:fontFamily="@font/baemin"
             android:includeFontPadding="false"
             android:gravity="center"
-            android:text="Question"
+            android:text="@string/main_question"
             android:textColor="#FFFFFF"
             android:textSize="25dp"
             app:layout_constraintStart_toEndOf="@+id/lineLeGL"

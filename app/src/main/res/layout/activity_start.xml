@@ -3,6 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
 
+        <variable
+            name="start"
+            type="com.jisoo.identityvquiz.start.StartViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -83,7 +86,7 @@
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:fontFamily="@font/tvnbold"
-            android:text="제 5인격 퀴즈"
+            android:text="@string/start_mainText"
             android:gravity="center"
             android:textColor="#FFFFFF"
             app:layout_constraintStart_toEndOf="@+id/lineLeGL"
@@ -95,7 +98,7 @@
 
 
         <Spinner
-            android:id="@+id/quizLev"
+            android:id="@+id/spinner"
             android:layout_width="0dp"
             android:layout_height="0dp"
             android:background="@drawable/btn_drawable2"
@@ -112,7 +115,7 @@
             android:layout_height="0dp"
             android:fontFamily="@font/tvnbold"
             android:includeFontPadding="false"
-            android:text="카테고리 별로 각 10문제씩 있습니다."
+            android:text="@string/start_mainInfo"
             android:gravity="center"
             android:textColor="#FFFFFF"
             android:textSize="20dp"
@@ -128,7 +131,7 @@
             android:layout_height="0dp"
             android:onClick="startQuiz"
             android:background="@drawable/btn_drawable"
-            android:text="시작하기"
+            android:text="@string/start_startBtn"
             android:textColor="#ffffff"
             android:textSize="25dp"
             android:fontFamily="@font/tvnbold"

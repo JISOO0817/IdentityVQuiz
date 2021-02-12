@@ -23,11 +23,12 @@
         app:layout_constraintVertical_bias="0.377">
 
         <TextView
-            android:id="@+id/textView"
+            android:id="@+id/splashTitleTV"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/tvnbold"
-            android:text="IDENTITY V \n QUIZZ APP"
+            android:gravity="center"
+            android:text="@string/splash_title"
             android:textColor="#FFFFFF"
             android:textSize="60dp"
             app:layout_constraintBottom_toBottomOf="parent"

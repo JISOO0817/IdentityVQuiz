@@ -12,17 +12,15 @@ import com.jisoo.identityvquiz.start.StartActivity;
 
 public class SplashActivity extends AppCompatActivity {
 
-
-    MediaPlayer mp;
+//
+//    MediaPlayer mp;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        mp= MediaPlayer.create(this,R.raw.backg);
-        mp.setLooping(true);
-        mp.start();
+
 
         Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
@@ -35,9 +33,17 @@ public class SplashActivity extends AppCompatActivity {
         },3000);
     }
 
-    @Override
-    protected void onPause() {
-        super.onPause();
-        mp.pause();
-    }
+//    @Override
+//    protected void onStart() {
+//        super.onStart();
+//        mp= MediaPlayer.create(this,R.raw.backg);
+//        mp.setLooping(true);
+//        mp.start();
+//    }
+//
+//    @Override
+//    protected void onStop() {
+//        super.onStop();
+//        mp.release();
+//    }
 }
